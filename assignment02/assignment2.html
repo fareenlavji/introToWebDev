@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment 2 - Color Schemes</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="assignment2.css">
+    <script src="assignment2.js" defer></script>
+</head>
+<body>
+    <!-- The first Column on the left depicting colour schema -->
+    <main class="container">
+        <h1>Colour Schemes</h1>
+        <!-- Semantic list of schemes, initial loading state -->
+        <article class="scheme-group" role="region" aria-label="Color schemes" aria-live="polite">
+            <p class="loading-text">Loading colour schemes…</p>
+        </article>
+    </main>
+
+    <!-- Header for a user-selected colour scheme -->
+    <aside aria-labelledby="scheme-heading">
+        <h2 id="scheme-heading"></h2>
+        <fieldset></fieldset>
+    </aside>
+
+    <!-- Displays colour blocks of a user-chosen colour scheme -->
+    <div id="loader" class="lds-ring" style="display:none;" aria-hidden="true">
+        <div></div><div></div><div></div><div></div>
+    </div>
+</body>
+</html>
