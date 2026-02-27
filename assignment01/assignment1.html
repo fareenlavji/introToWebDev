@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Assignment 1</title>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="variables-palette-7.css" >   
+   <link rel="stylesheet" href="assignment1.css" />
+</head>
+<body>
+<form method="get" action="https://www.randyconnolly.com/tests/process.php">
+    <fieldset>
+        <legend>Advanced Art Work Search</legend>
+
+        <!-- ROW 1: Search + Subject + Genre + Filter -->
+        <div id="searchBox" class="topRow row1">
+            <label for="search"></label> <!-- empty on sample image -->
+            <input type="text" id="search" name="search" placeholder="Search ..." />
+
+            <label>Subject: </label>
+            <label><input type="radio" name="subject" value="history" checked> History</label>
+            <label><input type="radio" name="subject" value="person"> Person</label>
+            <label><input type="radio" name="subject" value="landscape"> Landscape</label>
+
+            <label for="genre" class="sr-only"></label> <!-- empty on sample image -->
+            <select id="genre" name="genre">
+                <option value="0">Genre</option>
+                <option value="1">Baroque</option>
+                <option value="2">Renaissance</option>
+                <option value="3">Realism</option>
+            </select>
+
+            <button type="submit" name="submit" value="filter">Filter</button>
+        </div>
+
+        <!-- ROW 2: Bulk Actions + Apply to All -->
+        <div id="settingsBox" class="topRow row2">
+            <label for="bulk" class="sr-only">Bulk Actions</label>
+            <select id="bulk" name="bulk">
+                <option value="0">Bulk Actions</option>
+                <option value="1">Archive</option>
+                <option value="2">Edit</option>
+                <option value="3">Delete</option>
+                <option value="4">Collection</option>
+            </select>
+
+            <button type="submit" name="submit" value="apply">Apply to All</button>
+        </div>
+
+        <div id="paintingBox"></div>
+    </fieldset>
+</form>
+</body>
+</html>
